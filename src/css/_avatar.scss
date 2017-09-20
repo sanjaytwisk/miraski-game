@@ -1,0 +1,23 @@
+.avatar {
+    margin: 0 .5em 0 -7em;
+    position: absolute;
+
+    .game__user-info & {
+        position: relative;
+        margin:0 0 1em 0;
+    }
+
+    &__image,
+    &:before{
+      width: 6.25em;
+      height: 6.25em;
+        clip-path: polygon(50% 0%, 100% 25%, 100% 60%, 44% 100%, 9% 69%, 0 14%);
+    }
+
+    &:before {
+        position: absolute;
+        content: '';
+        background-color: $color-h;
+        transform: rotateZ(-70deg);
+    }
+}

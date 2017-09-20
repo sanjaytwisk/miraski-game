@@ -1,0 +1,112 @@
+@import 'webfont';
+$font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+$font-heading: "Miraski Extended", $font-stack;
+
+body {
+    font-family: $font-stack;
+    color: $color-text;
+}
+
+h1,
+h2,
+h3 {
+    font-family: $font-heading;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+h1 {
+    margin: 0;
+    color: $color-c;
+    font-size: 3em;
+
+    @media screen and (min-width: 48em) {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -1;
+        font-size: 6em;
+        line-height: 1;
+        text-align: right;
+    }
+    @media screen and (min-width: 64em) {
+        font-size: 8em;
+    }
+
+    &.alt {
+        position: relative;
+        font-size: 3em;
+        text-align: left;
+    }
+}
+
+h2,
+h3 {
+    margin: 2em 0 0;
+
+    &.alt {
+        text-align: center;
+    }
+}
+
+h2 {
+    font-size: 2em;
+}
+
+p {
+    margin: 0 0 1.5em;
+    max-width: 32em;
+    line-height: 1.5;
+}
+
+li {
+    line-height: 1.5;
+}
+
+.introduction {
+    font-size: 1.25em;
+    max-width: 26em;
+}
+
+a {
+    color: $color-a;
+}
+
+.extra-text {
+    display: none;
+
+    &--480 {
+        @media screen and (min-width: 30em) {
+            display: inline;
+        }
+    }
+}
+
+.is-hidden {
+    display: none;
+}
+
+.server-error-sad-face {
+    margin: 0 0 .5em;
+    display: inline-block;
+    font-family: monospace;
+    font-size: 4em;
+    letter-spacing: -.125em;
+    transform: rotate(90deg);
+
+    @media screen and (min-width: 48em) {
+        font-size: 8em;
+        line-height: 1;
+        position: absolute;
+        top: 0;
+        right: -1em;
+    }
+    @media screen and (min-width: 64em) {
+        font-size: 12em;
+        right: -2em;
+    }
+    @media screen and (min-width: 75em) {
+        font-size: 16em;
+        right: -3em;
+    }
+}

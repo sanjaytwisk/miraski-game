@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>MiraSki Game 2016</title>
+    <meta name="description" content="MiraSki Game 2016">
+    <link rel="stylesheet" href="{{ baseUrl }}/static/css/all.css">
+    <link rel="shortcut icon" href="https://cdn.mira.ski/favicon.ico">
+    <!--[if lt IE 9]><script>'article main footer'.replace(/\w+/g,function(n){document.createElement(n)})</script><![endif]-->
+    <script src="{{ baseUrl }}/static/js/babylon.min.js"></script>
+    <script>
+    (function(d){
+        if (!('querySelector' in d && 'addEventListener' in window)) return;
+
+        d.documentElement.className += ' has-js';
+
+        function load(src, dep) {
+            var s = d.createElement('script');
+            s.src = src;
+            s.onload = function() {
+                dep && dep.forEach(function(d) { load(d); });
+            };
+            s.onerror = console.error;
+            d.head.appendChild(s);
+        }
+
+        var supported =
+            'Symbol' in window &&
+            'Promise' in window &&
+            'assign' in Object &&
+            'from' in Array &&
+            'fetch' in window &&
+            'dataset' in document.createElement('div') &&
+            Symbol.iterator in NodeList.prototype;
+
+        if (supported) {
+            load('{{ baseUrl }}/static/js/commons.js', ['{{ baseUrl }}/static/js/main.js']);
+        } else {
+            load('{{ baseUrl }}/static/js/commons.js', ['{{ baseUrl }}/static/js/polyfill.js', '{{ baseUrl }}/static/js/main.js'])
+        }
+
+    }(document));
+    </script>
+</head>
+    <body data-cdn="{{ baseUrl }}/static">
+
+        <div class="game__mobile-text">
+            <div class="wrapper">
+                <article>
+                    <h1>Sorry</h1>
+                    <p class="introduction">Unfortunately, the game works only on a device with at least 1024px of screen width and a keyboard.</p>
+                </article>
+            </div>
+        </div>
+
+        <section class="game" data-module="Game" data-options='{ "modifiers": { "jagers": 2, "agility": 2, "boost": 2} }'>
+            <!-- CANVAS -->
+            <canvas></canvas>
+            <!-- SCORE -->
+            {% include './components/score.njk' %}
+
+            <!-- SOUND -->
+            {% include './components/sound.njk' %}
+
+            <!-- BOOST -->
+            {% include './components/boost.njk' %}
+
+            <!-- GAME OVER -->
+            {% include './components/gameover.njk' %}
+
+            <!-- MENU -->
+            {% include './components/menu.njk' %}
+        </section>
+    </body>
+</html>

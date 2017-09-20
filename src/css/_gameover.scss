@@ -1,0 +1,80 @@
+.gameover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 42;
+
+    &--disabled {
+        z-index: -1;
+        opacity: 0;
+    }
+
+    &__background {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        background: url(../images/schnee.png) center;
+        background-size: contain;
+        opacity: 1;
+        transition: .1s opacity ease-in-out;
+
+        .gameover--disabled & {
+            opacity: 0;
+        }
+    }
+
+    &__text,
+    &__form {
+        opacity: 1;
+        transition: .2s .2s opacity ease-out;
+
+        .gameover--disabled & {
+            opacity: 0;
+        }
+    }
+
+    &__text {
+        text-align: center;
+    }
+
+    &__heading {
+        margin: 0;
+        font-family: $font-heading;
+        text-transform: uppercase;
+        font-weight: 900;
+        font-size: 3em;
+    }
+    &__finalscoretext {
+        margin: 0;
+    }
+    &__finalscore {
+        margin: 0;
+        color: $color-e;
+        font-family: $font-heading;
+        font-size: 8em;
+        font-weight: 900;
+        line-height: 1;
+        text-shadow:
+            -.025em -.025em 0 $color-g,
+            .025em -.025em 0 $color-g,
+        	  -.025em .025em 0 $color-g,
+        	  .025em .025em 0 $color-g;
+        text-transform: uppercase;
+    }
+    &__form {
+        margin-left: 4em;
+        width: 15em;
+
+        .btn {
+            width: 100%;
+        }
+    }
+}

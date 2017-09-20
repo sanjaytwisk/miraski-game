@@ -1,0 +1,12 @@
+# Blender MTL File: 'None'
+# Material Count: 2
+
+newmtl upper
+Ns 96.078431
+Kd 0.39765 0.43584 0.21857
+illum 2
+
+newmtl bottom
+Ns 96.078431
+Kd 0.42089 0.64009 0.44255
+illum 2

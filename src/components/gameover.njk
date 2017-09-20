@@ -1,0 +1,21 @@
+<div class="gameover gameover--disabled">
+    <div class="gameover__background"></div>
+
+    <div class="gameover__text">
+        <h2 class="gameover__heading">Game over!</h2>
+        <p class="gameover__finalscoretext">your final score:</p>
+        <p class="gameover__finalscore" final-score>0</p>
+    </div>
+
+    <form class="gameover__form" action="{{ saveUrl }}" data-save-score>
+        <ol class="form-fields">
+            <li class="form-field">
+                <label for="game__username">Name</label>
+                <input type="text" data-name id="game__username" class="game__username game__username--hidden" pattern="^[a-zA-Z0-9]{2,15}$" placeholder="Jeroen">
+            </li>
+            <li class="form-field">
+                <button class="btn" type="submit">Save score</button>
+            </li>
+        </ol>
+    </form>
+</div>

@@ -1,0 +1,14 @@
+<svg width="42px" height="42px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g fill="none" transform="translate(4.000000, 3.000000)">
+        <g transform="translate(-680.000000, -355.000000)">
+            <g transform="translate(541.000000, 296.000000)">
+                <g>
+                    <g transform="translate(131.000000, 50.000000)">
+                        <polygon stroke="#A8E0FB" stroke-width="5" points="25.1735314 9.38220229 41.928762 19.3144939 40.7923905 34.4660643 22.0530551 44.8630813 10.2266467 34.4278822 8.44841462 16.0409104"></polygon>
+                        <polygon data-modifier-agility class="game__stats-value" stroke="#1F94CA" stroke-width="5" stroke-dashoffset="110" points="25.1735314 9.38220229 41.928762 19.3144939 40.7923905 34.4660643 22.0530551 44.8630813 10.2266467 34.4278822 8.44841462 16.0409104"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
